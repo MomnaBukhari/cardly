@@ -1,11 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+import Builder from './pages/Builder';
+import PublicCard from './pages/PublicCard';
+
 function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-black">
-      <h1 className="text-4xl text-white font-bold">
-        Cardly Setup Successful 🚀
-      </h1>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Builder />} />
+      <Route path="/:username" element={<PublicCard />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
